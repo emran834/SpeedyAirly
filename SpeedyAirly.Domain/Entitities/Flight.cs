@@ -2,10 +2,10 @@
 
 public class Flight
 {
-    public int FlightNumber { get; set; }
-    public string Departure { get; set; } = "";
-    public string Arrival { get; set; } = "";
-    public int Day { get; set; }
+    public int FlightNumber { get; init; }
+    public string Departure { get; init; } = "";
+    public string Arrival { get; init; } = "";
+    public int Day { get; init; }
     public int Capacity { get; set; } 
 
     public override string ToString()

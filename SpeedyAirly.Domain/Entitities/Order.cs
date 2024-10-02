@@ -2,6 +2,6 @@
 
 public class Order
 {
-    public string OrderId { get; set; } = "";
-    public string Destination { get; set; } = "";
+    public string OrderId { get; init; } = "";
+    public string Destination { get; init; } = "";
 }
