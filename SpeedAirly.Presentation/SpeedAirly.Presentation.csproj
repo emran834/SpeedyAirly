@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AppData\coding-assignment-orders.json" />
+    <None Remove="AppData\flightschedule.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AppData\coding-assignment-orders.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\flightschedule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpeedyAirly.Application\SpeedyAirly.Application.csproj" />
+    <ProjectReference Include="..\SpeedyAirly.DataAccess\SpeedyAirly.DataAccess.csproj" />
+    <ProjectReference Include="..\SpeedyAirly.Domain\SpeedyAirly.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
